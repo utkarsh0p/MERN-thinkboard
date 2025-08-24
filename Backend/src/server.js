@@ -7,13 +7,13 @@ import notesRoutes from './routes/notesRoutes.js'
 import rateLimiter from '../middleware/rateLimiter.js';
 const __dirname = path.resolve();
 app.use(cors())
-app.use(rateLimiter)
 app.use(express.json())
+app.use(rateLimiter)
 app.use('/api/route',notesRoutes)
 
 if(process.env.NODE_ENV === 'production'){
 app.use(express.static(path.join(__dirname,'../frontend/dist')))
-app.use('*',(req,res)=>{
+app.get('*',(req,res)=>{
    res.sendFile(path.join(__dirname,"../frontend/dist/index.html"))
 })
 }
