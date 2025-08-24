@@ -11,12 +11,11 @@ app.use(express.json())
 app.use(rateLimiter)
 app.use('/api/route',notesRoutes)
 
-if(process.env.NODE_ENV === "production"){
 app.use(express.static(path.join(__dirname,'../frontend/dist')))
 app.get('*',(req,res)=>{
-   res.sendFile(path.join(__dirname,"../frontend/dist/index.html"))
+   res.sendFile(path.join(__dirname,"../frontend", "dist", "index.html"))
 })
-}
+
 connectDB().then(()=>{
       app.listen(process.env.PORT || 3000,()=>{
       console.log("sever runnig on 3000")
