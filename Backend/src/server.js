@@ -5,13 +5,13 @@ import path from 'path'
 import { connectDB } from './config/db.js';
 import notesRoutes from './routes/notesRoutes.js'
 import rateLimiter from '../middleware/rateLimiter.js';
-const __dirname = path.resolve();
 app.use(cors())
+const __dirname = path.resolve();
 app.use(express.json())
 app.use(rateLimiter)
 app.use('/api/route',notesRoutes)
 
-if(process.env.NODE_ENV === 'production'){
+if(process.env.NODE_ENV === "production"){
 app.use(express.static(path.join(__dirname,'../frontend/dist')))
 app.get('*',(req,res)=>{
    res.sendFile(path.join(__dirname,"../frontend/dist/index.html"))
