@@ -1,5 +1,5 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 /* @plugin "daisyui"; */
-body{
-    font-family:monospace;
+body {
+  font-family: monospace;
 }

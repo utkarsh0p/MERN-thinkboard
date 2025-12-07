@@ -1,5 +1,5 @@
-import { NotebookIcon } from "lucide-react";
-import { Link } from "react-router-dom";
+import { NotebookIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const NotesNotFound = () => {
   return (
@@ -9,9 +9,13 @@ const NotesNotFound = () => {
       </div>
       <h3 className="text-2xl font-bold">No notes yet</h3>
       <p className="text-base-content/70">
-        Ready to organize your thoughts? Create your first note to get started on your journey.
+        Ready to organize your thoughts? Create your first note to get started
+        on your journey.
       </p>
-      <Link to="/create" className="btn bg-black text-white pl-3 pr-3 pt-2 pb-3 rounded-xl">
+      <Link
+        to="/create"
+        className="btn bg-black text-white pl-3 pr-3 pt-2 pb-3 rounded-xl"
+      >
         Create Your First Note
       </Link>
     </div>
