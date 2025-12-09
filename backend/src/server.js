@@ -13,7 +13,7 @@ app.use('/api/route', notesRoutes);
 
 // app.use(express.static(path.join(__dirname,'../frontend/dist')))
 app.get('/', (req, res) => {
-  res.json({ message: "welcome to the bakcend" });
+  res.json({ message: 'welcome to backend' });
   // res.sendFile(path.join(__dirname,"../frontend", "dist", "index.html"))
 });
 
