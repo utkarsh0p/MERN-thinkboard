@@ -14,7 +14,7 @@ const Navbar = () => {
           <div>
             <Plus className="text-white" />
           </div>
-          <span className="text-white">NewNote</span>
+          <span className="text-white">Create Note</span>
         </Link>
       </div>
     </div>
