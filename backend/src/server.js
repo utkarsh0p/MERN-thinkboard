@@ -12,7 +12,8 @@ app.use(rateLimiter);
 app.use('/api/route', notesRoutes);
 
 // app.use(express.static(path.join(__dirname,'../frontend/dist')))
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
+  res.json({ message: "welcome to the bakcend" });
   // res.sendFile(path.join(__dirname,"../frontend", "dist", "index.html"))
 });
 
