@@ -17,7 +17,7 @@ app.get('*', (req, res) => {
 });
 
 connectDB().then(() => {
-  app.listen(process.env.PORT || 3000, () => {
-    console.log('sever runnig on 3000');
+  app.listen(process.env.PORT || 5000, () => {
+    console.log('sever runnig on 5000');
   });
 });
